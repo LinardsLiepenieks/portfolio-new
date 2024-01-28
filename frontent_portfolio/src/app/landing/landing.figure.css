@@ -1,0 +1,30 @@
+.landing-figure {
+  width: 64%;
+  height: 48vh;
+  background-color: var(--main-dark);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  clip-path: polygon(0 0, 79% 0, 100% 100%, 0% 100%);
+}
+
+.landing-figure-footer {
+  width: 100%;
+  height: 80px;
+  background-color: var(--main-dark);
+  position: absolute;
+  bottom: 0;
+}
+.figure-wrapper {
+  filter: drop-shadow(8px 0px 16px var(--drop-shadow-dark));
+  animation: figureStart 0.8s ease-in-out;
+}
+
+@keyframes figureStart {
+  from {
+    height: 100%;
+  }
+  to {
+    height: 0%;
+  }
+}

@@ -1,0 +1,31 @@
+<section id="landing" class="section">
+  <!---Backgroun with parallax-->
+  <div
+    class="landing-background"
+    [style.transform]="'translateY(' + parallaxOffset + 'px)'"
+  >
+    <div class="landing-padding-wrapper">
+      <div class="landing-inner-wrapper">
+        <div class="quote-container">
+          <div class="quote">
+            <span class="quote-text">{{ profileData?.quote }}</span>
+            <span class="quote-author">-Latvian saying</span>
+          </div>
+        </div>
+        <div class="logo-wrapper">
+          <div class="logo-container">
+            <img [src]="logoSource" class="logo" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!---Backgroun with parallax end-->
+
+  <div class="figure-wrapper">
+    <div class="landing-figure">
+      <p class="description">{{ profileData?.description }}</p>
+    </div>
+    <div class="landing-figure-footer"></div>
+  </div>
+</section>

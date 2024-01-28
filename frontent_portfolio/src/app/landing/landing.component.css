@@ -1,0 +1,81 @@
+#landing {
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  scroll-snap-align: start;
+}
+
+.landing-background {
+  background-color: var(--light-red);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  transition: all 0.2s ease-out; /* Add a smooth transition for the parallax effect */
+  animation: landingStart 1s ease-in-out; /* Name of the animation, duration, and easing */
+}
+
+@keyframes landingStart {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+.landing-padding-wrapper {
+  padding: 132px 32px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.landing-inner-wrapper {
+  flex: 1;
+  display: flex;
+}
+.quote-container {
+  display: flex;
+  flex: 1;
+  padding: 32px;
+  justify-content: center;
+}
+.logo-wrapper {
+  flex: 1;
+  display: flex;
+}
+.logo-container {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+.logo {
+  filter: drop-shadow(8px 16px 8px var(--drop-shadow-dark));
+}
+
+.quote {
+  display: flex;
+  flex-direction: column;
+}
+.quote-text {
+  font-size: var(--fs-xxl);
+  color: var(--main-light);
+  font-weight: medium;
+}
+.quote-author {
+  font-size: var(--fs-xl);
+  color: var(--main-light);
+  font-weight: normal;
+  font-style: italic;
+  align-self: flex-end;
+}
+.description {
+  color: var(--main-light);
+  font-size: var(--fs-xl);
+  font-weight: normal;
+  padding: 24px 72px;
+}

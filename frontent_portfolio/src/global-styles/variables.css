@@ -1,0 +1,16 @@
+:root {
+  /*colors*/
+  --main-dark: #0d111c;
+  --main-light: #f5f5f5;
+  --light-red: #d6231f;
+  --dark-red: #99221f;
+  --drop-shadow-dark: #0d111c86;
+
+  /*font-sizes*/
+  --fs-xxxl: 67.34px;
+  --fs-xxl: 50.52px;
+  --fs-xl: 37.9px;
+  --fs-lg: 28.43px;
+  --fs-md: 21.33px;
+  --fs-sm: 16px;
+}

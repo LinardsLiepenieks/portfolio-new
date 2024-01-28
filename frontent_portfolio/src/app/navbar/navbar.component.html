@@ -1,0 +1,26 @@
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a
+      #homeLink
+      (click)="scrollToSection(homeLink, 'landing')"
+      [ngClass]="{ active: activeSection === 'landing' }"
+      class="navbar-link"
+      class="navbar-link active"
+      >Home</a
+    >
+    <a
+      #menuLink
+      (click)="scrollToSection(menuLink, 'main-menu')"
+      [ngClass]="{ active: activeSection === 'main-menu' }"
+      class="navbar-link"
+      >About</a
+    >
+    <a
+      #contactLink
+      (click)="scrollToSection(menuLink, 'contact-info')"
+      [ngClass]="{ active: activeSection === 'contact-info' }"
+      class="navbar-link"
+      >Contact</a
+    >
+  </div>
+</nav>

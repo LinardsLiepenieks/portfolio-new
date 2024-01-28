@@ -1,0 +1,90 @@
+#contact-info {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--main-dark);
+}
+
+.contact-title {
+  margin: 0;
+  padding: 8px 0;
+  font-size: var(--fs-xxxl);
+  font-weight: normal;
+}
+
+.contact-email {
+  font-size: var(--fs-xl);
+  font-weight: semi-bold;
+  padding: 8px 0;
+}
+
+.contact-info-container {
+  padding: 64px 176px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 1;
+}
+.contact-input-title {
+  font-size: var(--fs-xxl);
+  font-weight: normal;
+  margin: 0;
+  padding: 16px 0;
+}
+
+#contact-info textarea,
+input {
+  padding: 24px 16px;
+  font-size: var(--fs-md);
+  font-weight: medium;
+  border-radius: 8px;
+  border: 4pt solid var(--main-light);
+  background-color: var(--main-dark);
+  color: var(--main-light);
+  max-width: 80%;
+  width: 800px;
+  margin: 8px 0;
+}
+.email-form {
+  display: flex;
+  flex-direction: column;
+}
+.email-submit-btn {
+  display: inline;
+  background-color: var(--main-light);
+  font-weight: 700;
+  font-size: var(--fs-md);
+  color: var(--main-dark);
+  padding: 16px 24px;
+  margin: 20px 0;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  transition: 0.4s all ease;
+}
+
+.email-submit-btn:hover {
+  cursor: pointer;
+  color: var(--main-light);
+  background-color: var(--main-dark);
+  border: 2px solid var(--main-light);
+}
+
+.trademark-container {
+  position: absolute;
+  background-color: var(--light-red);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 64px 64px;
+  bottom: 0;
+  right: 0;
+  width: 206px;
+  height: 190px;
+  clip-path: polygon(100% 32%, 0% 100%, 100% 100%);
+  box-shadow: 60px 72px 80px 64px var(--main-dark) inset;
+  filter: brightness(0.9);
+}
+
+.trademark-container span {
+}
