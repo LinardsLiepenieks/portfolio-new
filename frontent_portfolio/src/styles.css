@@ -11,8 +11,11 @@ html {
   scroll-behavior: smooth;
   background-color: var(--light-red);
   margin: 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   padding: 0;
 }
 body {
   margin: 0 auto;
+  overflow: hidden;
 }

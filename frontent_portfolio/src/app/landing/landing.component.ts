@@ -7,7 +7,6 @@ import { ProfileInfoService } from '../services/profile-info.service';
 
 })
 export class LandingComponent implements OnInit {
-  @ViewChild('scrollContainer', { static: true }) scrollContainer!: ElementRef;
 
   constructor (private profileInfoService: ProfileInfoService) { }
   @Input() parallaxOffset: number = 0;

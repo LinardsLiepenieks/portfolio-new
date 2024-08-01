@@ -5,6 +5,7 @@
   width: 100%;
   height: 100vh;
   filter: drop-shadow(8px 0px 16px var(--drop-shadow-dark));
+  overflow: hidden;
 }
 
 .landing-figure {
@@ -15,6 +16,7 @@
   left: 0;
   bottom: 0;
   clip-path: polygon(0 0, 79% 0, 100% 100%, 0% 100%);
+  animation: floatUp 0.4s ease-out forwards;
 }
 
 .landing-figure-footer {
@@ -25,11 +27,11 @@
   bottom: 0;
 }
 
-@keyframes figureStart {
-  from {
-    bottom: -100%;
+@keyframes floatUp {
+  0% {
+    transform: translateY(100%);
   }
-  to {
-    bottom: 0%;
+  100% {
+    transform: translateY(0%);
   }
 }
