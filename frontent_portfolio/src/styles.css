@@ -16,18 +16,3 @@ html {
 body {
   margin: 0 auto;
 }
-
-#scrollContainer {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth; /* Add smooth scroll animation */
-}
-
-#scrollContainer > div {
-  height: 100vh;
-  scroll-snap-stop: always;
-  scroll-snap-align: start; /* Adjust as needed */
-}

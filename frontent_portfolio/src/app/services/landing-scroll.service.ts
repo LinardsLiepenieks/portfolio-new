@@ -9,7 +9,7 @@ export class LandingScrollService {
   private scrollValue = new BehaviorSubject<number>(0);
 
   setScrollValue(value: number) {
-    this.scrollValue.next(value);
+    //this.scrollValue.next(value);
   }
 
   getScrollValue() {
