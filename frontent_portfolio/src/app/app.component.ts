@@ -1,5 +1,4 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
-import { LandingScrollService } from './services/landing-scroll.service';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,6 +8,7 @@ export class AppComponent {
   @ViewChild('scrollContainer', { static: true }) scrollContainer!: ElementRef;
   private isScrolling = false;
   private readonly scrollDelay = 100;
+  parallaxOffset: number = 0;
   private wheelListener: ((event: WheelEvent) => void) | null = null;
 
   title = 'frontent_portfolio';
@@ -21,6 +21,11 @@ export class AppComponent {
     if (this.wheelListener) {
       this.scrollContainer.nativeElement.removeEventListener('wheel', this.wheelListener);
     }
+  }
+  onContainerScroll(event: Event) {
+    const scrollPosition = (event.target as HTMLElement).scrollTop;
+    const maxParallaxOffset = this.scrollContainer.nativeElement.clientHeight * 0.3;
+    this.parallaxOffset = Math.min(scrollPosition * 0.5, maxParallaxOffset);
   }
 
   private handleWheel = (event: WheelEvent) => {
@@ -44,9 +49,7 @@ export class AppComponent {
       this.isScrolling = false;
     }, this.scrollDelay);
   }
-  onContainerScroll(event: Event) {
-    // You can add additional logic here if needed
-  }
+
 
 
 

@@ -1,10 +1,19 @@
+.figure-wrapper {
+  position: absolute;
+  display: flex;
+  z-index: 99;
+  width: 100%;
+  height: 100vh;
+  filter: drop-shadow(8px 0px 16px var(--drop-shadow-dark));
+}
+
 .landing-figure {
   width: 64%;
   height: 48vh;
-  background-color: var(--main-dark);
   position: absolute;
-  bottom: 0;
+  background-color: var(--main-dark);
   left: 0;
+  bottom: 0;
   clip-path: polygon(0 0, 79% 0, 100% 100%, 0% 100%);
 }
 
@@ -15,16 +24,12 @@
   position: absolute;
   bottom: 0;
 }
-.figure-wrapper {
-  filter: drop-shadow(8px 0px 16px var(--drop-shadow-dark));
-  animation: figureStart 0.8s ease-in-out;
-}
 
 @keyframes figureStart {
   from {
-    height: 100%;
+    bottom: -100%;
   }
   to {
-    height: 0%;
+    bottom: 0%;
   }
 }
